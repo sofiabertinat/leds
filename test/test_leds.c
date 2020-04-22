@@ -110,6 +110,20 @@ void test_LedState(void){
 	TEST_ASSERT_EQUAL(BIT_ON , ledState);
 }
 
+//Se puede consultar el estado de un LED.
+void test_LedStateAllOff(void){
+
+	const uint8_t led = 3;
+	uint8_t ledState = 0;
+
+	All_Leds_Off();
+	Led_State(&ledState, led);
+
+	TEST_ASSERT_EQUAL(ALL_OFF , ledState);
+}
+
+
+
 
 
 
